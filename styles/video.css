@@ -66,3 +66,55 @@
     column-gap: 16px;
     row-gap: 40px;
 }
+
+.pp-tooltip-container {
+    display: inline-block;
+    position: relative;
+}
+
+.pp-tooltip-container:hover .channel-picture-tooltip {
+    opacity: 1;
+}
+
+.channel-picture-tooltip {
+    background-color: white;
+    width: 200px;
+    padding: 12px 12px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    position: absolute;
+    top: 50px;
+    z-index: 300;
+
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    transition: opacity 0.15s;
+}
+
+.pp-tooltip {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 8px;
+}
+
+.author-tooltip,
+.subs-tooltip {
+    font-family: Roboto, Arial;
+}
+
+.author-tooltip {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.subs-tooltip {
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
